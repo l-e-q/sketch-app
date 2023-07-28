@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sketch app</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Sketch</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <script src="./script.js"></script>
+    <h1 id="title-text">Sketch app</h1>
+    <main>
+        <div id="menu">
+            <button id="pen-button">Pen</button>
+            <button id="eraser-button">Eraser</button>
+            <div class="pixels-input">
+                <input type="range" name="grid" id="sliderCanvasPixels" min="4" max="64" value="16">
+                <div class="sliderValue">16 x 16</div>
+            </div>
+            <button id="clear-button">Clear</button>
+            <input type="color" id="color-input">
+        </div>
+        <div id="canvas-container">
+            <div id="canvas"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
+
 </html>
