@@ -2,7 +2,7 @@ const canvas = document.querySelector('#canvas');
 
 let isMouseDown = false;
 let eraserOrPen = true;
-let canvasButtonsQuantity = 16;
+let canvasButtonsQuantity ;
 
 
 document.querySelector('#eraser-button').addEventListener('click', () => {
