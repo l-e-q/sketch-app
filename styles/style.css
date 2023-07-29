@@ -28,6 +28,7 @@ p {
 }
 
 .canvasButton {
+    all: unset;
     border: none;
     margin-bottom: 0;
     background-color: white;
@@ -37,8 +38,4 @@ p {
 
 main {
     display: flex;
-}
-
-.painted {
-    background-color: black;
 }

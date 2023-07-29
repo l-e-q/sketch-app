@@ -25,10 +25,9 @@ function setCanvas() {
     clearCanvas();
 
     for (let id = 0; id <= (canvasButtonsQuantity * canvasButtonsQuantity - 1); id++) {
-        const button = document.createElement('div');
+        const button = document.createElement('button');
         button.id = id;
         button.classList.add('canvasButton');
-        // button.textContent = id;
         button.addEventListener('mousemove', () => {
             let color = document.querySelector('#color-input').value
             if (isMouseDown) {
@@ -37,6 +36,14 @@ function setCanvas() {
                 } else {
                     button.setAttribute('style', `background-color: white;`)
                 }
+            }
+        });
+        button.addEventListener('click', () => {
+            let color = document.querySelector('#color-input').value
+            if (eraserOrPen) {
+                button.setAttribute('style', `background-color: ${color};`)
+            } else {
+                button.setAttribute('style', `background-color: white;`)
             }
         });
         canvas.appendChild(button);
