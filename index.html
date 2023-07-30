@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -13,6 +14,7 @@
     <h1 id="title-text">Sketch app</h1>
     <main>
         <div id="menu">
+            <input type="color" id="color-input">
             <button id="pen-button">Pen</button>
             <button id="eraser-button">Eraser</button>
             <div class="pixels-input">
@@ -20,12 +22,23 @@
                 <div class="sliderValue">16 x 16</div>
             </div>
             <button id="clear-button">Clear</button>
-            <input type="color" id="color-input">
         </div>
         <div id="canvas-container">
             <div id="canvas"></div>
         </div>
     </main>
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            l-e-q
+        </p>
+        <a href="https://github.com/l-e-q" target="_blank">
+            <i class="fa fa-github" style="font-size:38px;color:black"></i>
+        </a>
+    </footer>
     <script src="script.js"></script>
 </body>
 

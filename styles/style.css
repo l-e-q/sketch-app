@@ -2,29 +2,27 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-
+    font-family: 'roboto';
 }
 
 #title-text {
-    flex: 1;
-}
-
-#canvas-container {
-    display: flex;
-}
-
-p {
-    flex: 1;
+    font-size:  38px;
+    font-weight: 900;
+    margin: 40px 0;
 }
 
 #canvas {
     border: 5px solid black;
     display: grid;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-    margin: 0 auto;
+    margin-left: 30px;
+}
+
+#canvas-container {
+    padding-right: 150px;
 }
 
 .canvasButton {
@@ -36,6 +34,88 @@ p {
     height: 100%;
 }
 
+#menu {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#color-input {
+    margin-top: -50px;
+    align-self: center;
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    outline: none;
+    cursor: inherit;
+    margin-bottom: 30px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+#menu > button {
+    border: none;
+    margin-bottom: 20px;
+    padding: 12px 0;
+    border-radius: 10px;
+}
+
+.sliderValue {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#sliderCanvasPixels {
+    -webkit-appearance: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: gainsboro;
+    height: 3px;
+    border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    bottom: 6px;
+    position: relative;
+    background-color: gray;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.fa-github {
+    color: var(--primary-dark);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
 }
